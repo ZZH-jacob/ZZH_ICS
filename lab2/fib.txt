@@ -1,0 +1,27 @@
+.ORIG	x3000
+    AND	R1,	R1,	#0
+    AND	R2,	R2,	#0
+    AND	R3,	R3,	#0
+    AND	R4,	R4,	#0
+    AND	R7,	R7,	#0
+    ADD	R3,	R3,	#1
+    AND	R5,	R5,	#0
+    ADD	R5,	R5,	#-3
+    LD	R4,	NUM
+    POSE3 ADD	R5,	R5,	#1
+    BRnz POSE1
+    ADD	R1,	R1,	R1
+    POSE1 ADD	R7,	R1,	R3
+    AND	R7,	R7,	R4
+    ADD	R1,	R2,	#0
+    ADD	R2,	R3,	#0
+    ADD	R3,	R7,	#0
+    ADD	R0,	R0,	#-1
+    BRzp POSE3
+    END1 HALT
+    NUM .FILL #1023
+    a .FILL	#930;F(a),a=20
+    b .FILL	#1;F(b),b=0
+    c .FILL	#2;f(c),c=2
+    d .FILL	#898;F(d),d=48
+ .END
