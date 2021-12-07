@@ -1,6 +1,5 @@
 .ORIG	x3000
     ADD	R3,	R3,	#1
-    AND	R5,	R5,	#0
     ADD	R5,	R5,	#-3
     LD	R4,	NUM
     POSE3 ADD	R5,	R5,	#1
@@ -15,8 +14,8 @@
     BRzp POSE3
     END1 HALT
     NUM .FILL #1023
-    a .FILL	#930;F(a),a=20
-    b .FILL	#1;F(b),b=0
-    c .FILL	#2;f(c),c=2
-    d .FILL	#898;F(d),d=48
+    fa .FILL	#930
+    fb .FILL	#1
+    fc .FILL	#2
+    fd .FILL	#898
  .END
