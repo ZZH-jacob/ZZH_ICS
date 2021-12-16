@@ -1,0 +1,32 @@
+.ORIG	x3000
+    ADD	R0,	R0,	#-10
+    ADD	R0,	R0,	#-10
+    BRn POSE2
+    POSE4 LD R6 NUM5
+    ADD	R0,	R0,	R6
+    BRzp POSE4
+    LD	R7,	NUM3
+    ADD R0,R0,R7
+    POSE2 ADD	R0,	R0,	#10 
+    ADD	R0,	R0,	#10
+    LD	R3,	NUM1
+    LD	R5,	NUM2
+    LD	R4,	NUM
+    POSE3 ADD	R5,	R5,	#1
+    BRnz POSE1
+    ADD	R1,	R1,	R1
+    POSE1 ADD	R7,	R1,	R3
+    AND	R7,	R7,	R4
+    ADD	R1,	R2,	#0
+    ADD	R2,	R3,	#0
+    ADD	R3,	R7,	#0
+    ADD	R0,	R0,	#-1
+    BRzp POSE3
+    END1 HALT
+    NUM5 .FILL #-128
+    NUM4 .FILL #20
+    NUM3 .FILL #128
+    NUM2 .FILL	#-3
+    NUM1 .FILL	#1
+    NUM .FILL #1023
+ .END
