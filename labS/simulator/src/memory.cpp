@@ -10,7 +10,6 @@
 
 namespace virtual_machine_nsp {
     void memory_tp::ReadMemoryFromFile(std::string filename, int beginning_address) {
-        beginning_address=0x3000;
         std::ifstream fp;
         fp.open(filename);
         int pose=beginning_address;
